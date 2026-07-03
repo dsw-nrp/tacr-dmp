@@ -1,3 +1,4 @@
+{%- set tacr_logo = assets("static/tacr-1.svg") -%}
 {%- import "src/mapping/prepare-data.j2" as json with context -%}
 {%- import "src/mapping/object.j2" as obj with context -%}
 {%- set dc = ctx|to_context_obj -%}
@@ -17,6 +18,15 @@
     </style>
   </head>
   <body>
+
+    <!-- Záhlaví -->
+    <div class="myHeader">
+        <img src="{{ tacr_logo.src_value }}" alt="Logo">
+        <div class="header-text">
+           {{ ctx.project.name }}
+        </div>
+    </div>
+
     <article class="dmp">
       {%- if macros.formatDetection() == "HTML_with_warnings" -%}
         {% include "src/content/validation.html.j2" with context %}

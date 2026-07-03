@@ -1,12 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap');
 
 /* Layout and global styles */
 
 @page {
   size: A4;
+  margin-top: 5cm;
+  @top-center {
+    width: 100%;
+    content: element(header);
+    border-bottom: 0px solid black;
+  }
 
   @bottom-left {
-    border-top: 1px solid black;
+    border-top: 0px solid black;
+    	
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 1rem;
+    vertical-align: top;
+    font-family: "Open Sans", sans-serif;
+    font-size: 10pt;
+  }
+  @bottom-right {
+    border-top: 0px solid black;
     content: '';
     display: block;
     width: 100%;
@@ -16,17 +34,7 @@
     font-size: 10pt;
   }
   @bottom-center {
-    border-top: 1px solid black;
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: 1rem;
-    vertical-align: top;
-    font-family: "Open Sans", sans-serif;
-    font-size: 10pt;
-  }
-  @bottom-center {
-    border-top: 1px solid black;
+    border-top: 0px solid black;
     content: counter(page) " / " counter(pages);
     display: block;
     width: 100%;
@@ -54,8 +62,38 @@ h1, h2, h3, h4, h5, h6 {
   page-break-after: avoid !important;
 }
 
+h2, h3, h4, h5, h6 {
+  color: #ee253e;
+}
+a {
+  color: #EE253E;
+}
+
 html, body {
   padding: 1em;
+}
+
+.myHeader {
+            position: running(header);
+            width: 100%;
+            height: 20mm; /* Nastavte výšku záhlaví podle potřeby */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20mm;
+            margin-bottom: 10mm;
+            /*padding:  20px;*/
+            box-sizing: border-box;
+}
+.myHeader img {
+    height: 20mm; /* Nastavte výšku obrázku podle potřeby */
+}
+.myHeader .header-text {
+    font-size: 16px;
+    text-align: right;
+    flex-grow: 1;
+    margin-left: 20px;
+    color: #ee253e;
 }
 
 body {
@@ -93,15 +131,20 @@ header {
 
 header h1 {
   margin: 2em;
-  font-size: 24pt;
+  font-size: 26pt;
   text-align: center;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  color: #ee253e;
 }
 
 header h3 {
-  margin-top: 2em;
+  margin-top: 6em;
   font-size: 18pt;
   color: #333;
   text-align: center;
+    font-weight: bold;
+  font-family: 'Carlito', sans-serif;
 }
 
 header > div.info {
@@ -117,12 +160,31 @@ header .note {
   font-style: italic;
 }
 
-header img.eu-header {
-  max-width: 160px;
+header img.frontpage-img{
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+  max-width: 100%;
+  height: 4cm;
 }
 
 header img.eu-flag {
   max-width: 320px;
+}
+
+.version-info{
+  font-size: 12pt;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  margin-top: 0;
+}
+.version-info .version{
+  margin-bottom: 12px;
+  margin-top: 0;
+  font-weight: bold;
+}
+.info .h3 {
+   margin-bottom:  12px;
 }
 
 /* Versions */
@@ -130,6 +192,7 @@ header img.eu-flag {
 div#dmp-versions table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 div#dmp-versions table,
@@ -141,6 +204,7 @@ div#dmp-versions th {
 div#dmp-versions td,
 div#dmp-versions th {
   padding: 0.2em;
+  text-align:  left;
 }
 
 div#dmp-versions th.title {
@@ -167,6 +231,10 @@ div#dmp-versions td.no-versions {
   font-style: italic;
   padding: 1em;
   text-align: center;
+}
+
+div#dmp-versions td:nth-child(3) {
+  width: 100%;
 }
 
 /* Contributors */

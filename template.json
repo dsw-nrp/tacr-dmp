@@ -1,9 +1,9 @@
 {
-    "templateId": "horizon-europe-dmp",
+    "templateId": "tacr-dmp",
     "organizationId": "dmp.eosc.cz",
     "version": "1.0.0",
-    "name": "Horizon Europe DMP",
-    "description": "Horizon Europe Data Management Plan for Czech National Repository Platform",
+    "name": "TAČR DMP",
+    "description": "TAČR Data Management Plan for Czech National Repository Platform",
     "license": "Apache-2.0",
     "metamodelVersion": "18.0",
     "allowedPackages": [

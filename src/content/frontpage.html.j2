@@ -1,29 +1,35 @@
-{%- set eu_doc = assets("static/European_Commission_Document.png") -%}
-{%- set eu_flag = assets("static/Flag_of_Europe.png") -%}
-
+{%- set eu_header = assets("static/eu-header.png") -%}
+{%- set eu_flag = assets("static/eu-flag.png") -%}
+{%- set tacr_logo = assets("static/tacr-1.svg") -%}
 <header>
   <center>
-  <img src="{{ eu_doc.src_value }}" height="78" width="160" class="eu-header" />
+  <img src="{{ tacr_logo.src_value }}" width="90%" class="frontpage-img" />
   </center>
-  <h1>{{data.meta.document.name}}</h1>
-  <center>
-  <img src="{{ eu_flag.src_value }}" height="213" width="320" class="eu-flag" />
-  </center>
-  <h3>
-    Horizon Europe<br/>
+  <h1>{{ data.meta.document.name }}</h1>
+
+
+
+
+
+  <div class="info">
+    <h3>
     Data Management Plan
   </h3>
 
-  <div class="info">
+
     <div class="version-info">
       {% for version in dc.project.versions if version.uuid == dc.project.version %}
         <div class="version">{{version.name}}</div>
       {% endfor %}
       <div class="date">{{ data.meta.document.createdAt|datetime_format("%d %B %Y") }}</div>
+
+
     </div>
 
+
+
     <p class="note">
-      Data Management Plan created in {{ dc.config.service_name }} &laquo;<a href="{{ dc.config.service_url }}" target="_blank">{{ dc.config.service_url }}</a>&raquo;<br/> using {{ dc.pkg.name }} v{{ dc.pkg.version }} (<span class="package-id"><span class="organization-id">{{ dc.pkg.org_id }}</span>:<span class="km-id">{{ dc.pkg.km_id }}</span>:<span class="version">{{ dc.pkg.version }}</span></span>).
+        Data Management Plan for Technology agency of the Czech Republic (TA CR) created in  <a href="{{ dc.config.service_url }}" target="_blank"> {{dc.config.service_name}}</a>. Corresponds with Horizon Europe DMP template.
     </p>
   </div>
 </header>
