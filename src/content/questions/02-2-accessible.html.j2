@@ -140,9 +140,11 @@
                                 No license has been selected for this distribution yet.{{ macros.linkQuestion(distribution.licensing.isLicenseChosen._path) }}
                                 {%- if distribution.licensing.notYetDecidedLicense -%}
                                     {%- if distribution.licensing.notYetDecidedLicense.isOpenLicense._value is sameas true %}
-                                        We intend to use an open license for this distribution.{{ macros.linkQuestion(distribution.licensing.notYetDecidedLicense.isOpenLicense._path) }}
                                         {%- if distribution.licensing.notYetDecidedLicense.licenseBasedOnLicenseSelector %}
-                                            We have used the License Selector tool to help us decide, and as a result, we are considering the following license: {{ distribution.licensing.notYetDecidedLicense.licenseBasedOnLicenseSelector._value }}.{{ macros.linkQuestion(distribution.licensing.notYetDecidedLicense.licenseBasedOnLicenseSelector._path) }}
+                                            {%- set license = distribution.licensing.notYetDecidedLicense.licenseBasedOnLicenseSelector %}
+                                            However, we plan to use and open license and, based the recommendations from the <a href="https://github.com/ufal/public-license-selector" target="_blank" rel="noopener">License Selector</a>, we are considering the following license: <em><a href="{{ license._raw.url }}" target="_blank" rel="noopener">{{ license._raw.name }}</a></em>.{{ macros.linkQuestion(license._path) }}
+                                        {%- else %}
+                                            We plan to use an open license for this distribution.{{ macros.linkQuestion(distribution.licensing.notYetDecidedLicense.isOpenLicense._path) }}
                                         {%- endif -%}
                                     {%- elif distribution.licensing.notYetDecidedLicense.isOpenLicense._value is sameas false %}
                                         We do not plan to use an open license for this distribution{{ macros.linkQuestion(distribution.licensing.notYetDecidedLicense._path) }} {%- if distribution.licensing.notYetDecidedLicense.noOpenLicenseReason %} because: {{ distribution.licensing.notYetDecidedLicense.noOpenLicenseReason._value }}.{{ macros.linkQuestion(distribution.licensing.notYetDecidedLicense.noOpenLicenseReason._path) }}{%- else -%}.{%- endif -%}

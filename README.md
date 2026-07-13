@@ -2,6 +2,10 @@
 
 *This Data Management Plan (DMP) template was developed for projects funded by the [Technology Agency of the Czech Republic (TAČR)](https://tacr.gov.cz/en/). It is based on the official [Horizon Europe Data Management Plan (DMP) template](https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/report/data-management-plan_he_en.docx) and has been adapted for use in the Data Stewardship Wizard (DSW). The template is built on a DSW Knowledge Model tailored to the requirements and specific needs of the Czech National Repository Platform for Research Data.*
 
+## Issues and Contributing
+
+This document template for DSW is available as open-source via GitHub Repository [dsw-nrp/tacr-dmp](https://github.com/dsw-nrp/tacr-dmp), you can [report issues](https://github.com/dsw-nrp/tacr-dmp/issues) there and fork it for customizations or contributions.
+
 ## Maintainers
 
 Responsible for the overall management and development of the document template, ensuring its continuous improvement, and overseeing contributions to maintain its integrity and relevance.
@@ -28,6 +32,6 @@ Contribute to the document template by adding new information, refining existing
 
 ### 1.0.0
 
-*Released*: 2026-X-X
+*Released*: 2026-07-13
 
 * Merged updates from release v1.0.0 of DSW Horizon Europe DMP
