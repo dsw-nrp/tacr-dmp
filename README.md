@@ -4,7 +4,7 @@
 
 ## Issues and Contributing
 
-This document template for DSW is available as open-source via GitHub Repository [dsw-nrp/horizon-europe-dmp](https://github.com/dsw-nrp/horizon-europe-dmp), you can [report issues](https://github.com/dsw-nrp/horizon-europe-dmp/issues) there and fork it for customizations or contributions.
+This document template for DSW is available as open-source via GitHub Repository [dsw-nrp/tacr-dmp](https://github.com/dsw-nrp/tacr-dmp), you can [report issues](https://github.com/dsw-nrp/tacr-dmp/issues) there and fork it for customizations or contributions.
 
 ## Maintainers
 
@@ -30,7 +30,7 @@ Contribute to the document template by adding new information, refining existing
 
 ## Changelog
 
-### 1.0.1
+### 1.0.0
 
 *Released*: 2026-07-13
 
