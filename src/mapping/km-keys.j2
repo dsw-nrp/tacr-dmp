@@ -1,0 +1,731 @@
+{#- json.key annotations of dmp.eosc.cz.czech-nrp-km:1.0.2 and how they nest. None: a value, {}: an object, []: a list.
+    Generated: regenerate it after a change of the knowledge model. -#}
+{%- set keys = {
+  "projects": [{
+    "name": None,
+    "acronym": None,
+    "number": None,
+    "abstract": None,
+    "startDate": None,
+    "endDate": None,
+    "webpage": None,
+    "objectives": [{
+      "objective": None,
+    }],
+    "fundings": [{
+      "grantId": None,
+      "funder": None,
+      "status": None,
+    }],
+    "costs": [{
+      "title": None,
+      "description": None,
+      "currency": None,
+      "amount": None,
+      "allocation": [],
+      "allocationOther": None,
+      "coveredBy": {
+        "grantId": None,
+        "other": None,
+      },
+    }],
+  }],
+  "contributors": [{
+    "name": None,
+    "orcid": None,
+    "affiliation": None,
+    "email": None,
+    "phone": None,
+    "isCreator": None,
+    "roles": [],
+    "projects": [{
+      "project": None,
+    }],
+  }],
+  "areCommunicationChannelsSet": {
+    "communicationChannels": None,
+  },
+  "policies": [{
+    "name": None,
+    "url": None,
+    "description": None,
+    "scope": [],
+    "otherScope": None,
+  }],
+  "expertiseRequirement": {
+    "trainingDetails": None,
+    "expertiseDetails": None,
+  },
+  "risks": [{
+    "description": None,
+    "isMitigationPlanned": {
+      "mitigationPlan": None,
+    },
+  }],
+  "searchingProcess": None,
+  "hasPreexistingData": {
+    "consideredData": [{
+      "name": None,
+      "hasIdentifier": {
+        "noIdentifierReason": None,
+        "type": None,
+        "identifier": None,
+      },
+      "isReused": {
+        "noReusedReason": {
+          "other": None,
+        },
+        "maintainer": None,
+        "dataVolume": None,
+        "conditions": {
+          "other": None,
+        },
+        "purpose": None,
+        "isVersioned": {
+          "usedVersion": None,
+          "versioningProcess": None,
+        },
+        "knownFormatting": {
+          "formats": [{
+            "format": None,
+          }],
+          "isUsableAsIs": None,
+        },
+        "users": [{
+          "user": None,
+        }],
+        "isSensitiveData": {
+          "isPersonalData": None,
+        },
+      },
+    }],
+  },
+  "datasets": [{
+    "name": None,
+    "identifiers": [{
+      "type": None,
+      "value": None,
+    }],
+    "keywords": [{
+      "keyword": None,
+    }],
+    "type": None,
+    "description": None,
+    "issueDate": None,
+    "citation": None,
+    "willBePublished": {
+      "noPlannedPublishedReason": None,
+      "isCompletePublished": {
+        "partialPublishedDetails": None,
+      },
+      "isPublished": None,
+      "publisher": None,
+    },
+    "purposes": [{
+      "purpose": None,
+    }],
+    "language": None,
+    "qualifiedReferences": [{
+      "type": None,
+      "value": None,
+      "relationship": None,
+    }],
+    "creatorsList": [{
+      "creator": None,
+    }],
+  }],
+  "collections": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "startDate": None,
+    "endDate": None,
+    "dateCreated": None,
+    "isEquipmentCollection": {
+      "whoMeasures": {
+        "controlOverData": {
+          "other": None,
+        },
+        "externalPartyResponsibility": {
+          "other": None,
+        },
+      },
+      "instruments": [{
+        "name": None,
+        "description": None,
+        "isStandard": None,
+        "url": None,
+      }],
+      "requiresRawDataPreparation": {
+        "integrityEnsured": None,
+        "securityEnsured": None,
+        "formats": [{
+          "format": None,
+        }],
+        "requiresFormatConversion": {
+          "newFormats": [{
+            "newFormat": None,
+          }],
+        },
+      },
+      "usesQualityProcesses": {
+        "calibration": None,
+        "repeatSamples": None,
+        "standardizedMethods": None,
+        "dataEntryValidation": None,
+        "dataPeerReview": None,
+        "usesControlledVocabularies": None,
+        "knownOutcomeSamples": None,
+        "otherQualityProcesses": {
+          "other": None,
+        },
+      },
+      "unitsOfMeasurement": [{
+        "unitOfMeasurement": None,
+      }],
+    },
+    "isPhysicalSamplesCollection": {
+      "storesPhysicalSamples": {
+        "isDepositedLongTerm": {
+          "noDepositForLongTermReason": None,
+          "repositoryNameDuringProject": None,
+          "isLongTermRepositoryDifferent": {
+            "repositoryNameDuringProject": None,
+            "repositoryNameLongTerm": None,
+          },
+        },
+        "physicalSamplesIdentification": None,
+        "usesReferencesToDigitalObjects": {
+          "referencesToDigitalObjectsImplementation": None,
+        },
+      },
+      "unitsOfMeasurement": [{
+        "unitOfMeasurement": None,
+      }],
+    },
+    "isNonEquipmentCollection": {
+      "usesQuestionnaires": None,
+      "usesReportsForms": None,
+      "usesPatientRecords": None,
+      "usesOtherForms": {
+        "otherForms": None,
+      },
+      "initialCaptureMethod": {
+        "dataNonDigitalEntryResponsibleParty": {
+          "projectTeamMembers": [{
+            "user": None,
+          }],
+          "other": None,
+        },
+        "isDigitalAvailabilityArranged": None,
+      },
+      "isCollectedBySinglePerson": {
+        "subjectivityRiskHandling": {
+          "other": None,
+        },
+      },
+      "unitsOfMeasurement": [{
+        "unitOfMeasurement": None,
+      }],
+    },
+    "isMonitoringIntegrityAfterCollection": {
+      "monitoringIntegrityAfterCollection": [],
+    },
+    "isSensitiveDataCollection": {
+      "isPersonalDataCollection": {
+        "typeOfSensitiveData": None,
+        "securityMeasures": [{
+          "name": None,
+          "description": None,
+        }],
+        "purpose": None,
+        "categoryGdpr": {
+          "whichSpecial": [],
+          "specialCategoryGdprExemption": {
+            "other": None,
+          },
+        },
+        "underLegalBasis": {
+          "typeOfConsent": None,
+          "isAvailableForReuse": {
+            "howOrganized": None,
+            "howAvailableForReuse": {
+              "howStored": None,
+            },
+          },
+          "processOfConsent": None,
+          "other": None,
+        },
+        "howSubjectsInformed": None,
+        "howSubjectsGetsRights": [],
+        "isFullyAnonymized": {
+          "isPseudonymized": {
+            "noPseudonymizationReason": None,
+          },
+          "isDpiaRequired": {
+            "isDpiaPerformedToPersonalData": {
+              "conducted": [{
+                "dataSubject": None,
+                "process": None,
+              }],
+              "reasons": [],
+            },
+          },
+          "controllers": [{
+            "controller": None,
+          }],
+          "isDataProcessingAgreementEstablished": {
+            "dataProcessingAgreements": [{
+              "processor": None,
+              "agreement": None,
+            }],
+          },
+          "safeguards": {
+            "safeguardsDescription": [],
+            "other": None,
+            "isTransferOutsideEu": {
+              "transferOutsideEuProtectionProcess": None,
+            },
+          },
+          "isSameLegalBasisAsCollection": {
+            "underLegalBasis": {
+              "other": None,
+            },
+          },
+          "anonymizationTechniques": [],
+          "other": None,
+        },
+        "isAlsoSensitiveData": {
+          "typeOfSensitiveData": None,
+        },
+      },
+    },
+    "isSubjectToEthicalReview": {
+      "ethicalCommitteeName": None,
+      "ethicalCommitteeApprovalNumber": None,
+      "ethicalReviewLinkDocument": None,
+      "ethicalReviewDocument": None,
+      "extensionOfReusedData": None,
+    },
+  }],
+  "processingEnvironments": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "isSharedWorkingSpace": {
+      "isCustomWorkingSpaceSecure": None,
+      "controlledAccess": {
+        "other": None,
+      },
+      "isLogged": None,
+    },
+    "isMonitoringIntegrityAfterProcessing": {
+      "monitoringIntegrityAfterProcessing": [],
+    },
+    "risksDetails": {
+      "isProjectMembersInstructedOnRisks": None,
+      "informationLeakImpact": None,
+      "informationVandalizedImpact": None,
+      "informationLostImpact": None,
+    },
+  }],
+  "dataStorageInfrastructures": [{
+    "name": None,
+    "description": None,
+    "availability": None,
+    "geographicalLocation": None,
+    "type": [],
+    "storage": {
+      "backupType": {
+        "other": None,
+      },
+      "backupFrequency": {
+        "other": None,
+      },
+      "recoveryProcess": None,
+      "peopleResponsibleBackup": [{
+        "personResponsibleBackup": None,
+      }],
+      "supportsVersioning": None,
+      "pidSystems": [{
+        "pidSystem": None,
+      }],
+      "resolvablePid": None,
+      "isCertified": {
+        "certification": {
+          "other": None,
+        },
+      },
+    },
+    "agreementOnStorageInfrastructureUse": None,
+  }],
+  "distributions": [{
+    "name": None,
+    "relatedDataset": None,
+    "description": None,
+    "contactPerson": None,
+    "isLicenseAssignedForDistribution": {
+      "isLicenseStoredWithDistribution": None,
+      "isLicenseChosen": {
+        "isOpenLicense": {
+          "noOpenLicenseReason": None,
+          "wantsHelpSelectingLicense": {
+            "licenseBasedOnLicenseSelector": None,
+          },
+        },
+        "licenses": [{
+          "license": None,
+          "startDate": None,
+        }],
+      },
+    },
+    "dataUsageRestrictionLocation": {
+      "other": None,
+    },
+    "formats": [{
+      "name": None,
+      "isStandard": {
+        "noStandardReason": {
+          "other": None,
+        },
+      },
+      "isSuitableForLongTerm": {
+        "convertToLongTermSuitable": None,
+      },
+      "isDescribed": None,
+    }],
+    "usedOntologies": [{
+      "name": None,
+      "url": None,
+    }],
+    "usesNewDataType": {
+      "needsAddFields": None,
+      "dataTypeRegistry": None,
+      "usesOntology": {
+        "providesOntologyMapping": None,
+      },
+      "creationProcess": None,
+      "descriptionForOthers": None,
+    },
+    "accessUrl": None,
+    "accessMode": None,
+    "isAccessibleViaStandardProtocol": {
+      "notAccessibleViaStandardProtocolReason": None,
+      "usedStandardProtocol": None,
+    },
+    "downloadUrl": None,
+    "whenAvailable": {
+      "isExactStartDateKnown": {
+        "availabilityDelayAfterProjectEnd": None,
+        "exactStartDate": None,
+      },
+      "isEmbargoPeriod": {
+        "noEmbargoReasonForPostponedAvailability": None,
+        "reason": None,
+        "durationEmbargoPeriod": None,
+      },
+    },
+    "endDate": None,
+    "risksOfAvailabilityDelay": [{
+      "risk": None,
+    }],
+    "isLargeVolume": {
+      "estimatedVolumeGb": None,
+      "largestVolumeComponent": None,
+    },
+    "dataStorageInfrastructure": None,
+  }],
+  "organisationStrategies": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "fileNamingConvention": {
+      "isAgreementOnFileNamingConvention": {
+        "agreementOnFileNamingConvention": None,
+      },
+      "isRelationshipsBetweenFiles": None,
+      "isMetadataEmbedded": None,
+    },
+    "usesFolderSystem": {
+      "folderSystemStrategy": None,
+    },
+    "dataStorageSystemOrganisations": [{
+      "storageSystem": {
+        "other": None,
+      },
+      "versioningStrategy": {
+        "other": None,
+      },
+    }],
+  }],
+  "metadataSpecifications": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "description": None,
+    "language": None,
+    "isStandardMetadata": {
+      "reason": {
+        "other": None,
+      },
+      "metadataElements": [{
+        "metadataElement": None,
+      }],
+      "canBeHarvestedIndexed": None,
+      "identifier": None,
+    },
+    "isAvailableAfterDataNotAvailable": {
+      "noAvailableReason": None,
+      "howAvailableGuaranteed": None,
+    },
+    "isFindable": {
+      "noFindableReason": None,
+    },
+    "howConnectionToData": [],
+    "howConnectionToDataOther": None,
+    "isProvenanceDocumented": {
+      "noProvenanceReason": None,
+      "provenanceDocumentedType": {
+        "other": None,
+      },
+      "usesStandard": {
+        "noStandardReason": {
+          "other": None,
+        },
+        "standardProvenanceUsed": None,
+      },
+    },
+    "usesPids": {
+      "whoProvidesPids": {
+        "other": None,
+      },
+    },
+    "isLicenseCC0": {
+      "noLicenseCC0Reason": None,
+    },
+  }],
+  "documentationSpecifications": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "description": None,
+    "includeMethodology": None,
+    "includeDataValidation": None,
+    "format": None,
+  }],
+  "preservationStrategies": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "usesLongTermStorageDuringProject": {
+      "canRegenerateOriginalData": None,
+      "rawDataArchivalTime": None,
+      "isDataChangingOverTime": {
+        "requiresFrequentBackups": None,
+        "usesBackupsForHumanErrorRecovery": {
+          "humanErrorRecoveryPlan": None,
+        },
+      },
+      "archiveType": {
+        "other": None,
+      },
+      "isArchiveStoredRemotely": None,
+      "isArchiveSecurityProvided": {
+        "isEncrypted": {
+          "isKeyAccessClearlyDefined": None,
+        },
+        "isPhysicalArchiveAccessDefined": None,
+      },
+      "isArchiveAccessOnlineRequired": {
+        "isDataIntegrityGuaranteed": None,
+        "isAccessRequestProcessDefined": None,
+      },
+      "isArchiveAccessDecided": {
+        "isRestoreRequesterDefined": None,
+        "isRestoreTimeManageableForLargeData": None,
+        "isPostProjectDataAuthorityDefined": None,
+      },
+      "isArchivePeriodDefined": {
+        "archivePeriod": {
+          "exactArchivePeriod": None,
+        },
+      },
+      "isLongTermDataUsabilityEnsured": None,
+    },
+    "usesLongTermStorageAfterProject": {
+      "noLongTermStorageAfterProjectReason": None,
+      "funder": None,
+      "minimumLifeTime": {
+        "otherPeriod": None,
+        "other": None,
+      },
+      "isArchivalPeriodExtendable": {
+        "noArchivalPeriodExtensionReason": None,
+        "archivalExtensionDecisionMaker": {
+          "other": None,
+        },
+        "archivalExtensionDecisionCriteria": [],
+      },
+      "isFormatUpgradePlanned": None,
+      "isMediaUpgradePlanned": None,
+    },
+    "isPreservationStatementDefined": {
+      "description": None,
+      "documentLink": None,
+      "document": None,
+    },
+  }],
+  "reuseRestrictions": [{
+    "isPlanned": {
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "relatedDataset": None,
+        }],
+      },
+    },
+    "isReuseRestrictionSpecified": {
+      "reuseRestrictionReason": [],
+      "other": None,
+    },
+    "potentialDataUsers": {
+      "other": None,
+    },
+    "accessRestriction": {
+      "asOpenAsPossibleApproach": None,
+      "canDataOpen": {
+        "isLegalReason": {
+          "isPrivacyReason": {
+            "locationOfData": None,
+            "pseudonymization": {
+              "useThirdPartyForPseudonymization": None,
+            },
+            "anonymization": None,
+            "aggregation": None,
+          },
+          "isIntellectualPropertyReason": {
+            "isOwnershipOfDataDefined": None,
+            "isDecisionPowerOfMovingDataDefined": None,
+          },
+          "isAuthenticatedAccess": {
+            "dataStorage": None,
+            "authenticationProcess": {
+              "other": None,
+            },
+            "whoAuthenticate": {
+              "dataAccessCommitte": None,
+              "other": None,
+            },
+            "authenticationCriteriaAvailable": None,
+            "auditingForReuseArranged": None,
+          },
+        },
+        "isBusinessReason": {
+          "other": None,
+        },
+        "isOtherReason": {
+          "other": None,
+        },
+        "isAccessProcessDefined": {
+          "description": None,
+          "timeFrame": None,
+          "isExpectedCost": {
+            "expectedCost": None,
+            "currency": None,
+          },
+        },
+        "collaboratorAccessProcess": None,
+        "isDataSharingAgreementRequired": {
+          "isDefined": {
+            "description": None,
+            "documentLink": None,
+            "document": None,
+          },
+        },
+      },
+      "dataRightsArrangement": {
+        "other": None,
+      },
+      "isMetadataAvailable": {
+        "noMetadataAvailableReason": None,
+      },
+      "isDocumentationAvailable": {
+        "noDocumentationAvailableReason": None,
+      },
+    },
+  }],
+  "areToolsForAccessReuse": {
+    "noToolsForAccessReuseReason": None,
+    "toolsForAccessReuse": [{
+      "name": None,
+      "description": None,
+      "isFreeAndAvailable": {
+        "noAvailableSolution": None,
+      },
+      "hasAccessLink": {
+        "includesDocumentation": {
+          "noDocumentationReason": None,
+        },
+        "includesSoftware": None,
+        "type": None,
+        "value": None,
+      },
+      "isForAllDatasets": {
+        "relatedDatasets": [{
+          "typeOfDataset": {
+            "relatedProducedDataset": None,
+            "relatedReusedDataset": None,
+          },
+        }],
+      },
+      "isAvailableInInstitution": None,
+    }],
+  },
+  "outputsRetentionCriteriaDescription": None,
+  "areOtherOutputs": {
+    "areSwPackages": {
+      "swPackages": [{
+        "swPackage": None,
+        "isOpenLicense": {
+          "openLicense": None,
+        },
+        "whereAvailable": None,
+        "isListedInCatalogue": None,
+      }],
+    },
+    "areOtherOutputsNoSw": {
+      "otherOutputs": [{
+        "description": None,
+        "whyImportant": None,
+        "whoWillUse": None,
+        "isAvailable": {
+          "noAvailableReason": None,
+          "whereAvailable": None,
+        },
+      }],
+    },
+  },
+} -%}

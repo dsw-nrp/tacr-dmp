@@ -1,2 +1,18 @@
+{%- import "src/mapping/km-keys.j2" as km with context -%}
+{#- Questions removed by the question tags of a project are not in the replies: add them as unanswered. -#}
+{%- macro fillMissingKeys(target, keys) -%}
+    {%- for key, nested in keys.items() -%}
+        {%- if key not in target -%}
+            {%- do target.update({key: None if nested is none or nested is mapping else []}) -%}
+        {%- elif nested is mapping and target[key] is mapping -%}
+            {%- do fillMissingKeys(target[key], nested) -%}
+        {%- elif nested is not none and nested is not mapping and nested|length > 0 and target[key] -%}
+            {%- for item in target[key] -%}
+                {%- do fillMissingKeys(item, nested[0]) -%}
+            {%- endfor -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endmacro -%}
 {%- set dc = ctx|to_context_obj -%}
 {%- set obj = dc|extract_replies -%}
+{%- do fillMissingKeys(obj, km.keys) -%}
