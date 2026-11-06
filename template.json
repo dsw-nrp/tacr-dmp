@@ -1,7 +1,7 @@
 {
     "templateId": "tacr-dmp",
     "organizationId": "dmp.eosc.cz",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "TAČR DMP",
     "description": "TAČR Data Management Plan for Czech National Repository Platform",
     "license": "Apache-2.0",

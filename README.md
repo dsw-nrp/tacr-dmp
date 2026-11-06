@@ -30,6 +30,15 @@ Contribute to the document template by adding new information, refining existing
 
 ## Changelog
 
+### 1.0.1
+
+*Released*: 2026-11-06
+
+* Fix rendering projects with selected question tags, where the questions without these tags are missing
+* Fix rendering a dataset purpose that points to a project objective without text
+* Fix rendering a license entered manually instead of selected from License Selector tool
+* Show the name of the existing data access committee
+
 ### 1.0.0
 
 *Released*: 2026-07-13
