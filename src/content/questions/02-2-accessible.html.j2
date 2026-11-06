@@ -142,7 +142,7 @@
                                     {%- if distribution.licensing.notYetDecidedLicense.isOpenLicense._value is sameas true %}
                                         {%- if distribution.licensing.notYetDecidedLicense.licenseBasedOnLicenseSelector %}
                                             {%- set license = distribution.licensing.notYetDecidedLicense.licenseBasedOnLicenseSelector %}
-                                            However, we plan to use and open license and, based the recommendations from the <a href="https://github.com/ufal/public-license-selector" target="_blank" rel="noopener">License Selector</a>, we are considering the following license: <em><a href="{{ license._raw.url }}" target="_blank" rel="noopener">{{ license._raw.name }}</a></em>.{{ macros.linkQuestion(license._path) }}
+                                            However, we plan to use an open license and, based on the recommendations from the <a href="https://github.com/ufal/public-license-selector" target="_blank" rel="noopener">License Selector</a>, we are considering the following license: <em>{% if license._raw %}<a href="{{ license._raw.url }}" target="_blank" rel="noopener">{{ license._raw.name }}</a>{% else %}{{ license._value }}{% endif %}</em>.{{ macros.linkQuestion(license._path) }}
                                         {%- else %}
                                             We plan to use an open license for this distribution.{{ macros.linkQuestion(distribution.licensing.notYetDecidedLicense.isOpenLicense._path) }}
                                         {%- endif -%}
@@ -444,7 +444,7 @@
                             {%- elif dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate._value == "new_data_access_committee" %}
                                 People can apply to the data access committee that we will set up.
                             {%- elif dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate._value == "existing_data_access_committee" %}
-                                People can apply to {{ "the <em>" ~ dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate.dataAccessCommitte._value ~ "</em>" if dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate.dataAccessCommittee else "existing" }} data access committee.
+                                People can apply to {% if dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate.dataAccessCommittee %}the <em>{{ dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate.dataAccessCommittee._value }}</em>{% else %}existing{% endif %} data access committee.
                             {%- elif dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticateOther %}
                                 For the authorization of potential users, we will make special arrangements{{ ": " ~ dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticateOther._value if dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticateOther  else "." }}
                             {%- endif -%}

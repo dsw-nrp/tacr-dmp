@@ -342,7 +342,7 @@
         {%- do dataset.update({"hasPublisher": datasetItem.willBePublished.publisher}) -%}
     {%- endif -%}
     {%- for purpose in datasetItem.purposes -%}
-        {%- if purpose.purpose and purpose.purpose._uuid in objectivesMap -%}
+        {%- if purpose.purpose and purpose.purpose._uuid in objectivesMap and objectivesMap[purpose.purpose._uuid].objective -%}
             {%- do dataset.purposes.append(objectivesMap[purpose.purpose._uuid].objective) -%}
         {%- endif -%}
     {%- endfor -%}
@@ -1646,7 +1646,7 @@
             "isMetadataAvailable": reuseRestrictionItem.accessRestriction.isMetadataAvailable|default(None),
             "noMetadataAvailableReason": None,
             "isDocumentationAvailable": reuseRestrictionItem.accessRestriction.isDocumentationAvailable|default(None),
-            "noDocumentationAvailableReason": "super truper",
+            "noDocumentationAvailableReason": None,
         },
     } -%}
     {%- if reuseRestriction.isReuseRestrictionSpecified._value is sameas true -%}
@@ -1723,7 +1723,7 @@
                 {%- endif -%}
                 {%- if reuseRestriction.accessRestriction.dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate._value == "existing_data_access_committee"  -%}
                     {%- do reuseRestriction.accessRestriction.dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate.update({
-                        "dataAccessCommittee": reuseRestrictionItem.accessRestriction.canDataOpen.isLegalReason.isAuthenticatedAccess.whoAuthenticate.dataAccessCommittee|default(None),
+                        "dataAccessCommittee": reuseRestrictionItem.accessRestriction.canDataOpen.isLegalReason.isAuthenticatedAccess.whoAuthenticate.dataAccessCommitte|default(None),
                     }) -%}
                 {%- elif reuseRestriction.accessRestriction.dataCannotOpen.legalReason.authenticatedAccess.whoAuthenticate._value == "other"  -%}
                     {%- do reuseRestriction.accessRestriction.dataCannotOpen.legalReason.authenticatedAccess.update({
